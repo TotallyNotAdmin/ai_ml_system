@@ -26,7 +26,7 @@ PoC демонстрирует:
 Запуск demo:
 
 ```bash
-python -m poc.demo
+python poc.run
 ```
 
 Запуск smoke-тестов:
@@ -38,13 +38,13 @@ python -m unittest discover -s poc/tests -t . -v
 Проверка fallback при недоступности LLM:
 
 ```bash
-SIMULATE_LLM_FAILURE=true python -m poc.demo
+SIMULATE_LLM_FAILURE=true python poc.run
 ```
 
 Для Windows cmd:
 
 ```cmd
-set SIMULATE_LLM_FAILURE=true && python -m poc.demo
+set SIMULATE_LLM_FAILURE=true && python poc.run
 ```
 
 После запуска создаётся файл `var/decisions.jsonl` с логом решений.
